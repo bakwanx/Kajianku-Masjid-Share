@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_beranda"
+            android:icon="@drawable/ic_home"
+            android:title="Beranda"/>
+        <item android:id="@+id/nav_posting"
+            android:icon="@drawable/ic_edit"
+            android:title="Posting"/>
+        <item android:id="@+id/nav_sholat"
+            android:icon="@drawable/ic_time"
+            android:title="Waktu Sholat"/>
+    </group>
+    <item android:title="Setting/LogOut">
+        <menu>
+            <item
+                android:id="@+id/nav_setting"
+                android:icon="@drawable/ic_setting"
+                android:title="Setting"/>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Log Out"/>
+        </menu>
+    </item>
+</menu>

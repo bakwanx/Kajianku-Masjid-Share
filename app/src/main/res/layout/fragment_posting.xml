@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FAFAFA"
+    tools:context=".Fragment.PostingFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/t_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="230dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cd_frKajian"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/bg_navheader_white" />
+
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="14dp"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/montserrat"
+                                android:text="List Postingan"
+                                android:textColor="#545151"
+                                android:textSize="20sp" />
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Kajian Anda"
+                                android:textColor="#545151"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/material_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/t_welcome"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <RelativeLayout
+                    android:id="@+id/leku_search_touch_zone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="#FFFFFF"
+                        android:outlineSpotShadowColor="@color/grey"
+                        app:cardCornerRadius="10dp">
+
+                        <Button
+                            android:id="@+id/btn_frposting"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/leku_search_background"
+                            android:hint="Posting Kajian" />
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/material_toolbar"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rc_viewPosting"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="3dp" />
+
+                <ImageView
+                    android:id="@+id/img_kajian_frPosting_onfailure"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:src="@drawable/ic_onfail" />
+
+                <TextView
+                    android:id="@+id/tv_fr_Posting_onfailure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_kajian_frPosting_onfailure"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <com.agrawalsuneet.dotsloader.loaders.ZeeLoader
+        android:id="@+id/zeeLoader_fr_posting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:zee_animDuration="300"
+        app:zee_distanceMultiplier="3"
+        app:zee_dotsRadius="4dp"
+        app:zee_firstDotsColor="#1aff00"
+        app:zee_secondDotsColor="#88ff7b" />
+
+</RelativeLayout>
